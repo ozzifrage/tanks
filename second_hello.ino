@@ -6,8 +6,14 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  
   while(!gb.update());
   gb.display.clear();
-  gb.display.print("hello again");
+  
+  // draw environment
+  gb.display.setColor(DARKBLUE);
+  gb.display.fill();
+  gb.display.setColor(GREEN);
+  gb.display.fillRect(0,gb.display.height() - 10, gb.display.width(), gb.display.height());
+  
 }
